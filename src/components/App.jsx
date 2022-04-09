@@ -1,15 +1,9 @@
+import styles from './app.module.css'
+
 export const App = () => {
   return (
     <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        textTransform: 'uppercase',
-        color: '#010101',
-      }}
+      className={styles.mainBox}
     >
       React homework template
     </div>
