@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import blank_image from './blank_jpg';
+import blank_image from '../..img/blank.jpg';
 import PropTypes from 'prop-types';
 import styles from './cartMovies.module.css';
 

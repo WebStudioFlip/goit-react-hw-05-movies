@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { searchMoviesKey } from '../../services/themoviedbAPI';
 
-import SearchBar from './SearchBar';
-import MoviesList from '../../components/MovieSearch/MovieList';
-
+import SearchBar from '../SearchBar';
+import MoviesList from '../../components/MoviesList';
 import Loader from '../../components/Loader';
 
 const MovieSearch = () => {
@@ -50,7 +49,7 @@ const MovieSearch = () => {
       <SearchBar onSubmit={changeSearch} />
 
       {query && Boolean(movies.length) && (
-        <MoviesList movies={movies} location={location} />
+         <MoviesList data = {data} location = {location} title="Результаты поиска"/>
       )}
 
       {!movies.length && query && !loading && !error && (

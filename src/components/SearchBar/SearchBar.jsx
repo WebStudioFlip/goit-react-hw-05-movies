@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import PropTypes from 'prop-types';
 
 import style from './searchbar.module.css';
@@ -8,13 +10,17 @@ const Searchbar = ({onSubmit}) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    if (search.trim() === '') {
+      toast.info('Please enter your query!');
+      return;
+    }
     onSubmit(search);
     setSearch('');
   };
 
   const handleChange = ({ target }) => {
     const {value } = target;
-    setSearch(value);
+    setSearch(value.toLowerCase());
   };
 
  

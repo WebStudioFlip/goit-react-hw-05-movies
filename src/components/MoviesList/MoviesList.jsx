@@ -1,6 +1,3 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { getFavoriteMovies } from '../../services/themoviedbAPI';
 import PropTypes from 'prop-types';
 import MovieCard from '../MovieCard';
 import Loader from '../Loader'
@@ -34,4 +31,5 @@ MoviesList.propTypes = {
       })
     ).isRequired,
     location: PropTypes.object.isRequired,
+    title: PropTypes.string,
   };
