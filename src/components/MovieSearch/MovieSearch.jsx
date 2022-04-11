@@ -25,7 +25,7 @@ const MovieSearch = () => {
     const fetchPosts = async () => {
       setData(prevState => ({ ...prevState, loading: true }));
       try {
-        const { results } = await searchMoviesKey(page, query);
+        const { results } = await searchMoviesKey({page, query});
         setData(prevState => ({
           ...prevState,
           movies: results,
