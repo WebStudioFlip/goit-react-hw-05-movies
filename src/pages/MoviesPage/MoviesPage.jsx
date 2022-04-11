@@ -1,4 +1,4 @@
-import MovieSearch from '../../components/SearchBar';
+import MovieSearch from '../../components/MovieSearch';
 
 const MoviesPage = () => {
   return (

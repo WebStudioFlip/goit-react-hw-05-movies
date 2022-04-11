@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import blank_image from '../..img/blank.jpg';
+import blank_image from './blank.jpg';
 import PropTypes from 'prop-types';
-import styles from './cartMovies.module.css';
+import styles from './movieCard.module.css';
 
-const MovieCard = ({ movie, location }) => {
+const MovieCard = ({ movie={}, location }) => {
+  
   return (
     <li key={movie.id} className={styles.movie}>
       <Link
@@ -18,7 +19,7 @@ const MovieCard = ({ movie, location }) => {
             alt={movie.title}
           />
         ) : (
-          <img className={styles.image} src={no_image} alt={movie.title} />
+          <img className={styles.image} src={blank_image} alt={movie.title} />
         )}
       </Link>
       <p className={styles.title}>{movie.title}</p>

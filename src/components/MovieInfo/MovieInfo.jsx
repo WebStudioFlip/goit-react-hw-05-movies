@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { getDetailsMovies } from '../../services/themoviedbAPI';
+import { getDetailsMovies } from '../../api/themoviedbAPI';
 import { useParams, Link, useLocation, useNavigate } from 'react-router-dom';
 import Loader from '../Loader';
-import blank_image from '../../img/blank.jpg';
+import blank_image from './blank.jpg';
 import styles from './movieInfo.module.css';
 
 const MovieInfo = () => {
@@ -49,7 +49,7 @@ const MovieInfo = () => {
     fetchInfo();
   }, [movieId]);
 
-  const { movie, loading, error } = state;
+  const { movie, loading} = state;
 
   return (
     <>

@@ -7,7 +7,7 @@ import style from './searchbar.module.css';
 
 const Searchbar = ({onSubmit}) => {
   const [search, setSearch] =useState('');
-
+console.log(onSubmit)
   const handleSubmit = e => {
     e.preventDefault();
     if (search.trim() === '') {

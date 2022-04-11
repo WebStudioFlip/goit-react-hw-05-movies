@@ -4,10 +4,8 @@ import Loader from '../Loader'
 
 import styles from './moviesList.module.css';
 
-const MoviesList = ({data, location, title='Trending this week'}) => {
-      
-      const { movies, loading } = data;
-    
+const MoviesList = ({data, location, title='Trending this week'}) => { 
+      const { movies, loading } = data;    
       const trendingMovies = movies.map(movie => (         
         <MovieCard movie={movie} location={location} key={movie.id} />
       ));
@@ -24,7 +22,7 @@ const MoviesList = ({data, location, title='Trending this week'}) => {
 export default MoviesList;
 
 MoviesList.propTypes = {
-    data: PropTypes.arrayOf(
+ movies: PropTypes.arrayOf(
       PropTypes.shape({
         movie: PropTypes.string.isRequired,
         id: PropTypes.number.isRequired,

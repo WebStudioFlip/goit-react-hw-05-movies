@@ -5,6 +5,7 @@
     margin: -15px;
     text-align: center;
     min-height: 300px;
+    list-style-type:none;
   }
   
   .castItem {

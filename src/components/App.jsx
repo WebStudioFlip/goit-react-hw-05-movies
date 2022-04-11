@@ -1,7 +1,7 @@
-import Routers from '../Routes';
+import Routers from './Routes';
 import styles from './app.module.css'
 
-export const App = () => {
+export const App = () => {  
   return (
     <div
       className={styles.mainBox}

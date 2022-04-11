@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovieReview } from '../../services/themoviedbAPI';
+import { getMovieReview } from '../../api/themoviedbAPI';
 
 import styles from './reviews.module.css';
 

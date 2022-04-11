@@ -1,18 +1,18 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import Loader from './components/Loader';
-import Container from './components/Container';
-import LayoutPage from './pages/LayoutPage';
-const HomePage = lazy(() => import('./pages/Homepage'));
-const MoviesPage = lazy(() => import('./pages/MoviesPage'));
-const MovieDetailsPage = lazy(() => import('./pages/MovieDetailsPage'));
-const Cast = lazy(() => import('./components/Cast'));
-const Reviews = lazy(() => import('./components/Reviews'));
+import Loader from './Loader';
+import Section from '../shared/Section';
+import LayoutPage from '../pages/LayoutPage';
+const HomePage = lazy(() => import('../pages/HomePage'));
+const MoviesPage = lazy(() => import('../pages/MoviesPage'));
+const MovieDetailsPage = lazy(() => import('../pages/MovieDetailsPage'));
+const Cast = lazy(() => import('./Cast'));
+const Reviews = lazy(() => import('./Reviews'));
 
-const Routers = () => {
+const Routers = () => {  
   return (
-    <Container>
+    <Section>
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<LayoutPage />}>
@@ -27,7 +27,7 @@ const Routers = () => {
         </Routes>
       </Suspense>
       <ToastContainer />
-    </Container>
+    </Section>
   );
 };
 

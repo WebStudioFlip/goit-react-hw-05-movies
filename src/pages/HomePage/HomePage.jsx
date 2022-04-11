@@ -1,9 +1,9 @@
-import MoviesList from '../../components/MoviesList';
+import MoviesTrending from '../../components/MoviesTrending';
 
-const HomePage = () => {
+const HomePage = () => {    
   return (
     <>
-      <MoviesList />
+      <MoviesTrending />
     </>
   );
 };

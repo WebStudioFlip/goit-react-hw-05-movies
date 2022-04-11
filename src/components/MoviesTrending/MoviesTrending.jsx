@@ -1,22 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getFavoriteMovies } from '../../services/themoviedbAPI';
-import PropTypes from 'prop-types';
+import { getFavoriteMovies } from '../../api/themoviedbAPI';
 import MoviesList from '../MoviesList';
-import Loader from '../Loader'
-
-import styles from './moviesList.module.css';
-
+console.log("render Trend")
 const MoviesTrending = () => {
     const [data, setData] = useState({
         movies: [],
         loading: false,
         error: null,
       });
-    
+      const firstRenderRef = useRef(false);
       const location = useLocation();
     
-      useEffect(() => {
+      useEffect(() => {        
         const fetchPosts = async () => {
           try {
             const { results } = await getFavoriteMovies();
@@ -38,11 +34,17 @@ const MoviesTrending = () => {
           }
         };
         fetchPosts();
-      }, []);      
-    
-      return (
-        <MoviesList data = {data} location = {location}/>
-      );
+        firstRenderRef.current = true;
+      }, []);   
+   
+   if (firstRenderRef.current) {
+    return (       
+      <MoviesList data = {data} location = {location}/>
+    );
+   } else {
+     return(<div>Wait</div>)
+   }
+      
 }
 
 export default MoviesTrending;

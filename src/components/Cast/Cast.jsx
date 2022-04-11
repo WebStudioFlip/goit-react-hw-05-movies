@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMoviesCredits } from '../../services/themoviedbAPI';
-import blank_avatar from '../../img/blank.jpg';
+import { getMoviesCredits } from '../../api/themoviedbAPI';
+import blank_avatar from './blank.jpg';
 
 import styles from './cast.module.css';
 
@@ -42,7 +42,7 @@ const Cast = () => {
         src={
           actor.profile_path
             ? `https://image.tmdb.org/t/p/w500${actor.profile_path}`
-            : defAvatar
+            : blank_avatar
         }
         alt={actor.original_name}
       />
