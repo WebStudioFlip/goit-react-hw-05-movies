@@ -1,8 +1,7 @@
 {
   "name": "goit-react-hw-05-movies",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://webstudioflip/goit-react-hw-05-movies/",
+  "private": true,  
   "author": "Pedchenko Yevhen <pedchenko.yevhen@gmail.com>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
