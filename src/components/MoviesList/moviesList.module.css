@@ -1,0 +1,15 @@
+.section {
+    max-width: 1200px;
+}
+.title {
+    font-size: 24px;
+}
+.moviesList {
+    display: grid;
+    max-width: calc(100vw - 50px);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin: 0px auto;
+    padding:  20px;
+    list-style: none;
+}

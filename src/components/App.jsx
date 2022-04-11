@@ -1,3 +1,4 @@
+import Routers from '../Routes';
 import styles from './app.module.css'
 
 export const App = () => {
@@ -5,7 +6,7 @@ export const App = () => {
     <div
       className={styles.mainBox}
     >
-      React homework template
+     <Routers />
     </div>
   );
 };
